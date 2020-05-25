@@ -15,8 +15,7 @@ namespace MEDICAL
         public static void Main(string[] args)
         {
             CreateHostBuilder(args).Build().Run();
-            
-            
+            seed();
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
@@ -24,7 +23,7 @@ namespace MEDICAL
                 .ConfigureWebHostDefaults(webBuilder => { webBuilder.UseStartup<Startup>(); });
 
 
-        void seed()
+        static void seed()
         {
             
             var db = new s19299DbContext();
